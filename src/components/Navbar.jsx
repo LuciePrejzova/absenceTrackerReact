@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+import logo from '../assets/images/logo-bile.png'
+
 const Navbar = () => {
   return (
 <nav className="bg-darkGreen border-b border-emerald-800">
@@ -7,10 +10,10 @@ const Navbar = () => {
             className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
           >
             {/* <!-- Logo --> */}
-            <a className="flex flex-shrink-0 items-center mr-4" href="/index.html">
+            <a className="flex flex-shrink-0 items-center mr-4" href="/">
               <img
                 className="h-10 w-auto"
-                src="src\assets\images\logo-bile.png"
+                src={logo}
                 alt="V Mechu"
               />
               <span className="hidden md:block text-vanilla text-2xl font-bold ml-2"
@@ -19,16 +22,25 @@ const Navbar = () => {
             </a>
             <div className="md:ml-auto">
               <div className="flex space-x-2">
-                <a
-                  href="/index.html"
+                <Link
+                  to="/index.html"
                   className="text-vanilla hover:bg-yellowGreen hover:text-darkGreen rounded-md px-3 py-2"
-                  >Admin</a
-                >
-                <a
-                  href="/jobs.html"
+                  >Admin</Link>
+                <Link
+                  to="/jobs.html"
                   className="text-vanilla hover:bg-yellowGreen hover:text-darkGreen rounded-md px-3 py-2"
-                  >Prihlasit se</a
-                >
+                  >Prihlasit se
+                  </Link>
+                <Link
+                  to="/substitutes"
+                  className="text-vanilla hover:bg-yellowGreen hover:text-darkGreen rounded-md px-3 py-2"
+                  >Nahrady
+                  </Link>
+                {/* <a
+                  href="/substitutes"
+                  className="text-vanilla hover:bg-yellowGreen hover:text-darkGreen rounded-md px-3 py-2"
+                  >Nahrady</a
+                > */}
               </div>
             </div>
           </div>
